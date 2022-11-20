@@ -71,7 +71,7 @@ The API endpoints to be used are build using Nodejs Express framework
 
 Food Trucks in San Francisco dataset is migrated to Postgresql database using CSV
 
-Both Database and Nodejs server is hosted in Amazon EC2
+Both Database and Nodejs server are hosted on Amazon EC2
 
 ## Assumptions 
 To add a new entry in the dataset, sample data is used from a json which contains an array of different possible entries which can be addded
