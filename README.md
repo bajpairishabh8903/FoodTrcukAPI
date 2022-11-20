@@ -8,14 +8,56 @@ PostgresSQL
 Git
 
 ## Setup
-Clone Repository using git clone https://github.com/bajpairishabh8903/FoodTrcukAPI.git
-Open command prompt for the folder where you cloned the repository and run npm i to install all Dependenicies
-Install PostgresSQL(add link) and create a Database 'Details_DB'
-Create a user called 'Administrator' in Login/Group roles with super user access 
+Clone Repository using 
+```bash
+git clone https://github.com/bajpairishabh8903/FoodTrcukAPI.git
+```
+Open command prompt for the folder where you cloned the repository and run below to install all Dependenicies
+```bash
+npm i 
+```
+Install <a href="https://www.postgresql.org/download/" target="_blank">PostgresSQL</a> and create a Database 'Details_DB'
+Create a user called 'Administrator' in Login/Group roles in PostgreSQL with super user access 
 Create a table in Details_DB using below query
-(add query)
+```bash
+CREATE TABLE IF NOT EXISTS public."FoodTruckDetials"
+(
+    locationid integer NOT NULL,
+    "Applicant" character varying COLLATE pg_catalog."default",
+    "FacilityType" character varying COLLATE pg_catalog."default",
+    cnn bigint,
+    "LocationDescription" character varying COLLATE pg_catalog."default",
+    "Address" character varying COLLATE pg_catalog."default",
+    blocklot character varying COLLATE pg_catalog."default",
+    block character varying COLLATE pg_catalog."default",
+    lot character varying COLLATE pg_catalog."default",
+    permit character varying COLLATE pg_catalog."default",
+    "Status" character varying COLLATE pg_catalog."default",
+    "FoodItems" character varying COLLATE pg_catalog."default",
+    "X" double precision,
+    "Y" double precision,
+    "Latitude" double precision,
+    "Longitude" double precision,
+    "Schedule" character varying COLLATE pg_catalog."default",
+    "Approved" timestamp without time zone,
+    "Received" bigint,
+    "PriorPermit" integer,
+    "ExpirationDate" timestamp without time zone,
+    "Location" character varying COLLATE pg_catalog."default",
+    "Zip Codes" integer,
+    CONSTRAINT "FoodTruckDetials_pkey" PRIMARY KEY (locationid)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."FoodTruckDetials"
+    OWNER to "Administrator";
+```
 Import dataset into the same table using Mobile_Food_Facility_Permit.csv provided in source code
-Open command prompt for the folder where you cloned the repository and run node app.js to run application
+Open command prompt for the folder where you cloned the repository and run below command to run application
+```bash
+node app.js
+```
 
 ## Details
 The API endpoints to be used are build using Nodejs Express framework
