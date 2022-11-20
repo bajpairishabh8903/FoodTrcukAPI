@@ -73,6 +73,10 @@ Food Trucks in San Francisco dataset is migrated to Postgresql database using CS
 
 Both Database and Nodejs server are hosted on Amazon EC2
 
+## Design
+
+<img src="http://13.126.180.61:8000/app_design.png"></img>
+
 ## Assumptions 
 To add a new entry in the dataset, sample data is used from a json which contains an array of different possible entries which can be addded
 
