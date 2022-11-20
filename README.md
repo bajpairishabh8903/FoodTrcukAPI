@@ -1,10 +1,12 @@
 # FoodTrcukAPI
-> This API is built to perform several tasks on dataset of Food Trucks in San Francisco
+This API is built to perform several tasks on dataset of Food Trucks in San Francisco
 
 
 ## Prerequisets
 Node JS 
+
 PostgresSQL
+
 Git
 
 ## Setup
@@ -16,8 +18,11 @@ Open command prompt for the folder where you cloned the repository and run below
 ```bash
 npm i 
 ```
+
 Install <a href="https://www.postgresql.org/download/" target="_blank">PostgresSQL</a> and create a Database 'Details_DB'
+
 Create a user called 'Administrator' in Login/Group roles in PostgreSQL with super user access 
+
 Create a table in Details_DB using below query
 ```bash
 CREATE TABLE IF NOT EXISTS public."FoodTruckDetials"
@@ -53,7 +58,9 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS public."FoodTruckDetials"
     OWNER to "Administrator";
 ```
+
 Import dataset into the same table using Mobile_Food_Facility_Permit.csv provided in source code
+
 Open command prompt for the folder where you cloned the repository and run below command to run application
 ```bash
 node app.js
