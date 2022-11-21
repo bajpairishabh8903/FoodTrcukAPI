@@ -10,6 +10,10 @@ PostgresSQL
 Git
 
 ## Setup
+Install <a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>
+
+Install <a href="https://git-scm.com/downloads" target="_blank">Git</a>
+
 Clone Repository using 
 ```bash
 git clone https://github.com/bajpairishabh8903/FoodTrcukAPI.git
@@ -89,11 +93,21 @@ http://13.126.180.61:8000/applicant?name={applicant Name}
 ```
 Replace {applicant Name} by name to be searched
 
+Example
+```bash
+http://13.126.180.61:8000/applicant?name=Ziaurehman Amini
+```
+
 ### Search by expiration date, to find whose permits have expired
 ```bash
 http://13.126.180.61:8000/expired_permits?date={date}
 ```
 Replace {date} by date by whcih permits have expired. Date format to used in mm-dd-yyyy (for eg: 03-15-2016)
+
+Example
+```bash
+http://13.126.180.61:8000/expired_permits?date=03-15-2016
+```
 
 ### Search by street name
 ```bash
@@ -101,14 +115,29 @@ http://13.126.180.61:8000/address?street={street}
 ```
 Replace {street} by street name to be searched. For Example Replace {street} by: MONTGOMERY
 
+Example
+```bash
+http://13.126.180.61:8000/address?street=MONTGOMERY
+```
+
 ### Add new food truck entry to the dataset
 ```bash
 http://13.126.180.61:8000/add_entry?index={index}
 ```
 Replace {index} by entry no in the json metioned in assumptions. For example if index=3 then 3rd entry from the json will be added to data set and can be verified by using search by name feature
 
+Example
+```bash
+http://13.126.180.61:8000/add_entry?index=5
+```
+
 ### Given a delivery location, find out the closest truck possible.
 ```bash
 http://13.126.180.61:8000/get_closest_truck?long={longitude}&lat={latitude}
 ```
-Replace {longitude} and {latitude} by their respctive values. For example http://13.126.180.61:8000/get_closest_truck?long=-122.3996179&lat=37.79926011
+Replace {longitude} and {latitude} by their respctive values.
+
+Example 
+```bash
+http://13.126.180.61:8000/get_closest_truck?long=-122.3996179&lat=37.79926011
+```
