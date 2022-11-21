@@ -130,7 +130,7 @@ Example
 ```bash
 http://13.126.180.61:8000/add_entry?index=5
 ```
-
+>Value of index allowed is 1 to 6 as there are only 6 entries present in the json mentioned in assumptions
 ### Given a delivery location, find out the closest truck possible.
 ```bash
 http://13.126.180.61:8000/get_closest_truck?long={longitude}&lat={latitude}
